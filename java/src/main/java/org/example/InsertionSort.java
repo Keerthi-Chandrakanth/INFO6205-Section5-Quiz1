@@ -7,15 +7,20 @@ public class InsertionSort {
             insert(i, a);
         }
     }
-
+ 
     private void insert(int i, Comparable[] a) {
-        //Inserts the 'Transition element' into its correct position in the sorted portion of the array.
-        //TODO: TO BE IMPLEMENTED
+    int j = i;
+    while (j > 0 && a[j - 1].compareTo(a[j]) > 0) {
+        swap(a, j - 1, j);
+        j--;
     }
+}
 
+ 
     private void swap(Object[] a, int i, int j) {
         Object temp = a[i];
         a[i] = a[j];
         a[j] = temp;
     }
+ 
 }
